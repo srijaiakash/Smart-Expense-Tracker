@@ -21,7 +21,6 @@ public class JwtUtil {
     public String Extractemail(String token){
         return Jwts.parserBuilder().setSigningKey(secretKey).build().parseClaimsJws(token).getBody().getSubject();
     }
-
     public boolean validatejwttoken(String token){
         try{
             Extractemail(token);
